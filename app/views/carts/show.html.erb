@@ -1,7 +1,8 @@
 <% if enhanced_cart.count == 0 %>
-  <h1 style="alert" >Your cart is currently empty. </h1>
-  <h1>Please add items to your cart to continue! </h1>
-  <h2> <%= link_to 'Home', :root %> </h2>
+  <div class="alert alert-warning" role="alert" >
+    <h2> Warning: </h2>
+    <h2> Your cart is currently empty. Please go <%= link_to 'home', :root %> to add items to your cart!</h2>
+  </div>
 
   <% else %>
 
