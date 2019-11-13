@@ -1,6 +1,6 @@
 <h1>Admin Dashboard</h1>
 
-<table class="table">
+<table class="table table-bordered">
     <tr class="active">
       <th scope="col"># of Products</th>
       <th scope="col"># of Categories</th>
@@ -12,3 +12,7 @@
     </tr>
   </tbody>
 </table>
+
+
+<%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
+<%= link_to 'View Products', [:admin, :products], class: 'btn btn-info' %>
