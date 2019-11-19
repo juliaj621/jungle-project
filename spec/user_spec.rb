@@ -2,7 +2,6 @@ require "rails_helper"
 
 RSpec.describe User, type: :model do
 
-
   describe 'Validations' do
     # These are required when creating the model so you should also have an example for this
     it "should be valid with all fields correct" do
@@ -44,6 +43,26 @@ RSpec.describe User, type: :model do
 
   describe '.authenticate_with_credentials' do
     # examples for this class method here
+    it "should be valid when email is in different cases" do
+      @user = User.create(first_name: "Julia", last_name: "J", email: "PINEAPPLE@pineapple.com", password: "password", password_confirmation: "password")
+      @user2 = User.authenticate_with_credentials("pineapple@PINEAPPLE.com", "password")
+      expect(@user2).not_to be_nil
+      expect(@user.id).to match(@user2.id)
+    end
+
+    it "should be valid when email is in different cases" do
+      @user = User.create(first_name: "Julia", last_name: "J", email: "pineapple@pineapple.com", password: "password", password_confirmation: "password")
+      @user2 = User.authenticate_with_credentials("pineapple@pineapple.com", "password")
+      expect(@user2).not_to be_nil
+      expect(@user.id).to match(@user2.id)
+    end
+
+    it "should be valid when email has spaces before/after" do
+      @user = User.create(first_name: "Julia", last_name: "J", email: "  pineapple@pineapple.com", password: "password", password_confirmation: "password")
+      @user2 = User.authenticate_with_credentials("pineapple@pineapple.com  ", "password")
+      expect(@user2).not_to be_nil
+      expect(@user.id).to match(@user2.id)
+    end
   end
 
 end
