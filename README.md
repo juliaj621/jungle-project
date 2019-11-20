@@ -2,6 +2,17 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Final Product
+
+"Home Page"
+!["Home Page"](https://github.com/juliaj621/jungle-project/blob/master/public/images/Screen%20Shot%202019-11-20%20at%203.30.53%20PM.png?raw=true)
+
+"Cart"
+!["Cart"](https://github.com/juliaj621/jungle-project/blob/master/public/images/Screen%20Shot%202019-11-20%20at%203.31.39%20PM.png?raw=true)
+
+"Admin Product Page"
+!["Admin Product Page"](https://github.com/juliaj621/jungle-project/blob/master/public/images/Screen%20Shot%202019-11-20%20at%203.31.18%20PM.png?raw=true)
+
 
 ## Setup
 
