@@ -1,15 +1,5 @@
 class CartsController < ApplicationController
 
-
-  def show
-    # product_id = params[:product_id].to_s
-    # if product_id == ""
-    #   puts 'no products'
-    # else 
-    #   puts 'some products'
-    # end
-  end
-
   def add_item
     product_id = params[:product_id].to_s
     modify_cart_delta(product_id, +1)
